@@ -1,3 +1,5 @@
+"use server";
+
 import nodemailer from "nodemailer";
 
 const USER_NAME = process.env.USER_NAME;
@@ -16,17 +18,14 @@ export async function sendMail(
   plainText: string,
   receivers: string
 ) {
-  const bodyText = `
-    ${plainText}
-  `;
-
   // send mail with defined transport object
   const info = await gmail_transporter.sendMail({
     from: from, // sender address
     to: receivers.split(","), // list of receivers
-    subject: "Encrypted email", // Subject line
-    text: bodyText,
+    subject: "Encrypted", // Subject line
+    text: plainText,
   });
 
   console.log("Message sent: %s", info.messageId);
+  return info;
 }

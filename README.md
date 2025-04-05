@@ -1,15 +1,23 @@
-# cs5321-project
+# CS5321 Project
 
-To install dependencies:
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Getting Started
+
+Install dependencies
 
 ```bash
+npm install
+# or
 bun install
 ```
 
-To run:
+Run the development server:
 
 ```bash
-bun run 
+npm run dev
+# or
+bun dev
 ```
 
-This project was created using `bun init` in bun v1.2.5. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
