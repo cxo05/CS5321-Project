@@ -12,6 +12,14 @@ npm install
 bun install
 ```
 
+Add environment variables
+
+```bash
+#.env
+USER_NAME=""
+PASSWORD=""
+```
+
 Run the development server:
 
 ```bash
