@@ -47,3 +47,12 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Usage
+
+1. Generate public and private keys using the generate key button
+2. Fill in email fields. For ease of demostration, send the email to the configured sender account (Send to yourself)
+3. Press Send
+4. After some time (~20 seconds), the email will be retrieved and displayed.
+
+![Example](Screenshot_1.png)
