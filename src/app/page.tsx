@@ -50,9 +50,9 @@ export default function Home() {
     });
 
     const encrypted = await openpgp.encrypt({
-      message: plainTextMessage, // input as Message object
+      message: plainTextMessage,
       encryptionKeys: publicKey,
-      signingKeys: privateKey, // optional
+      signingKeys: privateKey,
     });
     // console.log(encrypted); // '-----BEGIN PGP MESSAGE ... END PGP MESSAGE-----'
 
@@ -109,7 +109,6 @@ export default function Home() {
               <InputTextarea id="plainText" name="plainText"></InputTextarea>
               <label htmlFor="plainText">Public Key:</label>
               <InputTextarea
-                autoResize
                 value={publicKeyArmored}
                 onChange={(e) => setPublicKey(e.target.value)}
               ></InputTextarea>
@@ -119,7 +118,6 @@ export default function Home() {
           <div className="flex flex-col gap-2 pt-2">
             <label htmlFor="plainText">Private Key:</label>
             <InputTextarea
-              autoResize
               value={privateKeyArmored}
               onChange={(e) => setPrivateKey(e.target.value)}
             ></InputTextarea>
